@@ -1,7 +1,9 @@
+import Header from './Header';
+
 const Layout = ({ children }) => {
     return (
         <main>
-            <header>header</header>
+            <Header />
             {children}
             <footer>footer</footer>
         </main>
