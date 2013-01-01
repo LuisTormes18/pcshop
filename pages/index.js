@@ -1,4 +1,6 @@
 import Head from "next/head";
+import styles from "../styles/Home.module.css";
+
 const Home = () => {
     return (
         <>
@@ -7,7 +9,9 @@ const Home = () => {
                 <meta name="description" content="shop of pc components" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <h1>Home</h1>
+            <div className={styles.container}>
+                <h1>Home</h1>
+            </div>
         </>
     );
 };
