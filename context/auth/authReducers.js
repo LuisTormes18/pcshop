@@ -1,5 +1,10 @@
+// JSON.parse(localStorage.getItem("session")) || 
+import { types } from './../../types/types';
 export const initialState = {
-    session: JSON.parse(localStorage.getItem("session")) || null,
+    session: {
+        uid:1,
+        username:'User Prueba'
+    },
     isAuthenticated: false,
     msgError: null,
     btnDisabled: false,

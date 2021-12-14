@@ -1,18 +1,38 @@
+import { useContext } from "react";
+import Link from "next/link";
 import styles from "../../styles/Layout.module.css";
-import SearchForm from './SearchForm';
+
+import { authContext } from '../../context/auth/AuthProvider';
+
+import Navbar from "./../ui/Navbar";
+
 const Header = () => {
+    const [ auth ] = useContext(authContext);
+
     return (
         <header className={styles.header}>
-            <div className={styles.navbar}>
-                <h2 className={styles.logo}><small>pc</small>Shop</h2>
-                {/* <nav>Navbar</nav> */}
+            <div className={styles.header_left}>
+                <h2 className={styles.logo}>
+                    <small>pc</small>Shop
+                </h2>
+                <Navbar />
             </div>
-            <div className={styles.menu}>
+            <div className={styles.header_right}>
+                <span>C</span>
+                {
+                    !auth.isAuthenticated
+                         ?
+                         ( 
+                            <Link href="/login">
+                             <a>Login</a>
+                            </Link> 
+                         ) 
+                         :
+                         (
 
-               <SearchForm />
-
-                {/* <div>c</div> */}
-                <div>Login</div>
+                            <span>{auth.session.username}</span>
+                         )
+                }
             </div>
         </header>
     );

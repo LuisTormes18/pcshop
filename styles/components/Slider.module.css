@@ -1,0 +1,11 @@
+.carousel{
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: relative;
+    background-color: blue;
+}
+
+.carousel_item{
+	width: 100%;
+	height:100vh;
+}

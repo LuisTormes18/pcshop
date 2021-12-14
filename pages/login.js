@@ -1,9 +1,8 @@
-import { useContext, useEffect } from "react";
-import { Link } from "next/link";
+import { useContext } from "react";
 
-import useForm from "./../../hooks/useForm";
-// import authContext from "./../../context/auth/authContext";
-// import { setErrorLogin, startLogin } from "./../../actions/auth";
+import { authContext } from "./../context/auth/AuthProvider";
+import useForm from "./../hooks/useForm";
+
 
 const Login = () => {
     const [authState, dispatch] = useContext(authContext);
@@ -13,8 +12,6 @@ const Login = () => {
         password: "",
     });
     const { email, password } = stateValues;
-
-
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -48,26 +45,18 @@ const Login = () => {
                 </div>
                 <div className="form-group">
                     <input
-                        disabled={authState.btnDisabled}
+                        // disabled={authState.btnDisabled}
                         className="btn btn-primary"
                         type="submit"
                         value="Login"
                     />
                 </div>
 
-                {authState.loginError && (
+                {/* {authState.loginError && (
                     <div className="alert alert-danger" role="alert">
                         {authState.loginError}
                     </div>
-                )}
-
-                <Link
-                    disabled={authState.btnDisabled}
-                    className="link"
-                    to="/auth/register"
-                >
-                    Create a new account
-                </Link>
+                )} */}
             </form>
         </div>
     );

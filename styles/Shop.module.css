@@ -1,0 +1,19 @@
+.navbar{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 70px;
+	background-color: white;
+
+}
+.container{
+	height: auto;
+	padding: 40px 20%;
+
+}
+.grid{
+}
+.search_form input:focus{
+    outline: none;
+
+}

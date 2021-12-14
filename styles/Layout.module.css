@@ -1,18 +1,19 @@
 .main{
+    position: relative;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    height: auto;
+
 }
 
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 80px;
     padding: 0 5%;
     background-color: var(--dark-gray);
 
+    flex-wrap: wrap;
 
 }
 .logo{
@@ -21,11 +22,30 @@
 .logo small{
     /* color: var(--light-gray); */
     /* color: rgb(148, 180, 250); */
-    color: rgb(117, 147, 211);
+    color: var(--dark-blue);
 }
 
-.menu{
+.header_right,.header_left{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    color: var(--light-gray);
+}
+
+.navbar{
     display: flex;
     gap:10px;
-    color: var(--light-gray);
+}
+.search_form input:focus{
+    outline: none;
+
+}
+
+.footer{
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    background-color:  var(--dark-gray); 
 }
